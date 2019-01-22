@@ -3,7 +3,7 @@ int numParticles = 1000;
 color bgColor;
 
 void setup () {
-  size(1600, 800, P2D);
+  size(1200, 800, P2D);
   smooth(8);
   pixelDensity(displayDensity());
   colorMode(HSB, 360, 100, 100, 100);
@@ -26,17 +26,13 @@ void initPoints() {
 }
 
 void draw() {
-  for (int i = 0; i < 10; i++) {
-   
-  strokeWeight(2);
+  strokeWeight(1);
   beginShape(POINTS);
   for (Particle p : particles) {
     p.update();
     p.addVertex();
   }
   endShape();
-
-  }
 }
 
 void keyPressed() {
