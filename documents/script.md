@@ -107,8 +107,8 @@ endShape();
 内部的に`point()`は`beginShape(POINTS), vertex(), endShape()`の呼び出しで実装されている。
 
 ## noiseSeed()
-`noise()`で計算される値のもとになる**シード値**を設定する。  
-**シード値**が同じなら`noise()`は毎回同じ値になる  
+`noise()`で計算される値のもとになる**シード値**を設定する。  
+**シード値**が同じなら`noise()`は毎回同じ値になる  
 [noiseSeed_test](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/noiseSeed_test)
 ```java
 // シード値を1000で固定する
