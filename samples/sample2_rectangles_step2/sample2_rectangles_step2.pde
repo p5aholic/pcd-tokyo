@@ -25,21 +25,23 @@ void draw() {
   branch(size);
   popMatrix();
   
-  // saveFrame("frames/####.png");
+  saveFrame("frames/####.png");
 }
 
 void branch(float size) {
   noStroke();
-  if (random(1) < 0.8) {
-    fill(0, 0, random(10));
+  if (random(1) < 0.5) {
+    fill(0, 0, 0, 80);
   } else {
-    fill(bgColor);
+    fill(bgColor, 20);
   }
-  rect(0, 0, size - 1, size - 1);
+
+  float margin = 1.0;
+  rect(0, 0, size - margin, size - margin);
 
   float P = map(size, 5, height * 0.8, 0.5, 0.8);
   size *= 0.5;
-  size -= 1;
+  size -= margin;
 
   if (size > 5) {
     if (random(1) < P) {

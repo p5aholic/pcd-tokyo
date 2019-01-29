@@ -17,7 +17,7 @@ void draw() {
   branch(size);
   popMatrix();
   
-  // saveFrame("frames/####.png");
+  saveFrame("frames/####.png");
 }
 
 void branch(float size) {
