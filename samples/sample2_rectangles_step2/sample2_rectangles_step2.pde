@@ -3,11 +3,11 @@ color bgColor;
 void setup() {
   size(1400, 700, P2D);
   pixelDensity(displayDensity());
-  smooth(8);
   colorMode(HSB, 360, 100, 100, 100);
   rectMode(CENTER);
-  bgColor = color(0, 0, 95);
   noLoop();
+  
+  bgColor = color(0, 0, 95);
 }
 
 void draw() {
@@ -25,7 +25,7 @@ void draw() {
   branch(size);
   popMatrix();
   
-  saveFrame("frames/####.png");
+  // saveFrame("frames/####.png");
 }
 
 void branch(float size) {

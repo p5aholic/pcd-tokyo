@@ -1,7 +1,6 @@
 void setup() {
   size(1400, 700, P2D);
   pixelDensity(displayDensity());
-  smooth(8);
   colorMode(HSB, 360, 100, 100, 100);
   rectMode(CENTER);
   noLoop();
@@ -17,7 +16,7 @@ void draw() {
   branch(size);
   popMatrix();
   
-  saveFrame("frames/####.png");
+  // saveFrame("frames/####.png");
 }
 
 void branch(float size) {
