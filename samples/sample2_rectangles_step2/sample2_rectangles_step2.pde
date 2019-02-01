@@ -6,29 +6,22 @@ void setup() {
   colorMode(HSB, 360, 100, 100, 100);
   rectMode(CENTER);
   noLoop();
-  
+
   bgColor = color(0, 0, 95);
 }
 
 void draw() {
   background(bgColor);
-  
+
   float size = height * 0.8;
 
-  pushMatrix();
-  translate(width/2 - size/2, height/2);
-  branch(size);
-  popMatrix();
+  branch(width/2 - size/2, height/2, size);
+  branch(width/2 + size/2, height/2, size);
 
-  pushMatrix();
-  translate(width/2 + size/2, height/2);
-  branch(size);
-  popMatrix();
-  
   // saveFrame("frames/####.png");
 }
 
-void branch(float size) {
+void branch(float cx, float cy, float size) {
   noStroke();
   if (random(1) < 0.5) {
     fill(0, 0, 0, 80);
@@ -37,7 +30,7 @@ void branch(float size) {
   }
 
   float margin = 1.0;
-  rect(0, 0, size - margin, size - margin);
+  rect(cx, cy, size - margin, size - margin);
 
   float P = map(size, 5, height * 0.8, 0.5, 0.8);
   size *= 0.5;
@@ -45,28 +38,16 @@ void branch(float size) {
 
   if (size > 5) {
     if (random(1) < P) {
-      pushMatrix();
-      translate(-size/2, -size/2);
-      branch(size);
-      popMatrix();
+      branch(cx-size/2, cy-size/2, size);
     }
     if (random(1) < P) {
-      pushMatrix();
-      translate(size/2, -size/2);
-      branch(size);
-      popMatrix();
+      branch(cx+size/2, cy-size/2, size);
     }
     if (random(1) < P) {
-      pushMatrix();
-      translate(-size/2, size/2);
-      branch(size);
-      popMatrix();
+      branch(cx+size/2, cy+size/2, size);
     }
     if (random(1) < P) {
-      pushMatrix();
-      translate(size/2, size/2);
-      branch(size);
-      popMatrix();
+      branch(cx-size/2, cy+size/2, size);
     }
   }
 }
