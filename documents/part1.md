@@ -21,7 +21,7 @@
 # Sample1 : Step1
 基本アルゴリズムの実装から線に濃淡を作るまでを実装する。
 
-[Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample1_particle_step1)
+[Sample1_1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample1_particle_step1)
 ![](../images/sample1_step1_1.png)
 ![](../images/sample1_step1_2.png)
 
@@ -151,7 +151,7 @@ int numParticles = 10000; // パーティクルの数
 # Sample1 : Step2
 ランダムなカラーパレットを作り、パーティクルの色により複雑な変化を与える。
 
-[Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample1_particle_step2)
+[Sample1_2](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample1_particle_step2)
 ![](../images/sample1_step2_1.png)
 ![](../images/sample1_step2_2.png)
 
@@ -196,7 +196,7 @@ strokeColor = color(hue, sat, 100, 8);
 # Sample1 : Step3
 パーティクルの動きにパターンを増やし、1つのプログラムから多様なアウトプットを生み出せるシステムを作る。
 
-[Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample1_particle_step3)
+[Sample1_3](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample1_particle_step3)
 ![](../images/sample1_step3_1.png)
 ![](../images/sample1_step3_2.png)
 ![](../images/sample1_step3_3.png)

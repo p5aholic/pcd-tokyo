@@ -1,7 +1,7 @@
 # Sample2 : Step1
 基本アルゴリズムを実装する。
 
-[Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample2_rectangles_step1)
+[Sample2_1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample2_rectangles_step1)
 ![](../images/sample2_step1.png)
 
 ## アルゴリズム概要
@@ -59,7 +59,7 @@ if (random(1) < P) {
 # Sample2 : Step2
 配色を工夫する。
 
-[Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample2_rectangles_step2)
+[Sample2_2](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample2_rectangles_step2)
 ![](../images/sample2_step2_1.png)
 ![](../images/sample2_step2_2.png)
 
@@ -101,12 +101,12 @@ rect(cx, cy, size, size);
 # Sample2 : Step3
 グラデーションを使用しビジュアルに複雑さを足す。
 
-[Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample2_rectangles_step3)
+[Sample2_3](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample2_rectangles_step3)
 ![](../images/sample2_step3_1.png)
 ![](../images/sample2_step3_2.png)
 
 `P2D`レンダリングモードは内部で`OpenGL`を使用しているため、頂点に別々の色を指定することでグラデーションが作れる。
-[Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/gradation)
+[gradation](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/gradation)
 ```java
 // 上から下へのグラデーション
 beginShape();
