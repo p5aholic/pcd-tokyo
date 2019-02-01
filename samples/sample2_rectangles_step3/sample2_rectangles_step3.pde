@@ -42,11 +42,10 @@ void branch(float cx, float cy, float size) {
   strokeWeight(1);
   stroke(0, 0, 0, 5);
   if (random(1) < 0.9) {
-    fill(getRandomPalette(), 100, 100, 10);
+    drawGradationRect(cx, cy, size);
   } else {
-    fill(getRandomPalette(), 100, 100);
+    drawRect(cx, cy, size);
   }
-  rect(cx, cy, size, size);
 
   size *= 0.5;
 
@@ -68,6 +67,36 @@ void branch(float cx, float cy, float size) {
   if (random(1) < P) {
     branch(cx-size/2, cy+size/2, size); // 左下
   }
+}
+
+// ビビッドな色の正方形
+void drawRect(float cx, float cy, float size) {
+  fill(getRandomPalette(), 100, 100);
+  rect(cx, cy, size, size);
+}
+
+// 薄いグラデーションの長方形
+void drawGradationRect(float cx, float cy, float size) {
+  // 90度、180度、270度のどれかで回転する
+  pushMatrix();
+  translate(cx, cy);
+  int r = (int)random(4);
+  rotate(r * HALF_PI);
+
+  // グラデーションする長方形を描く
+  beginShape();
+  strokeWeight(1);
+  stroke(0, 0, 0, 5);
+  fill(palette[0], 100, 100, 10);
+  vertex(-size/2, -size/2);
+  vertex(+size/2, -size/2);
+
+  fill(palette[1], 100, 100, 10);
+  vertex(+size/2, +size/2);
+  vertex(-size/2, +size/2);
+  endShape(CLOSE);
+
+  popMatrix();
 }
 
 void mousePressed() {

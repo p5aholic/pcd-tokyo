@@ -9,6 +9,13 @@
 ![](../images/sample1_step3_1.png)
 ![](../images/sample1_step3_3.png)
 
+アルゴリズムのみでビジュアルは意識していない
+![](../images/sample2_step1.png)
+
+ビジュアルのクオリティを高めたもの
+![](../images/sample2_step3_1.png)
+![](../images/sample2_step3_2.png)
+
 私[(@P5Aholic)](https://twitter.com/p5aholic)がこれまでジェネラティブアートを作ってきた経験から得た、作品のビジュアルのクオリティを高める考え方や、1つのプログラムから多様なアウトプットを生み出すテクニックを共有します。
 
 # Sample1 : Step1
@@ -196,7 +203,8 @@ strokeColor = color(hue, sat, 100, 8);
 ![](../images/sample1_step3_4.png)
 
 ## `noise()`の復習
-[noise_basic](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/noise_basic)
+[noise_basic](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/noise_basic)  
+[noise_basic_2d](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/noise_basic_2d)  
 [noise_angle](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/noise_angle)
 
 ## パラメータの乱数化
@@ -241,7 +249,7 @@ if (mode == 2) {
 
 `ceil()`は小数点以下を切り上げする関数。  
 `ceil(n * 6.0)` で`n`の値が**1.0, 2.0, 3.0, 4.0, 5.0, 6.0**の6つの値になる。  
-それを6.0で割ることで、0~1の間で値が6等分される。
+それを6.0で割ることで、0~1の間で値が6つに区切られる。
 ```
 n = ceil(n * 6.0) / 6.0;
 ```
