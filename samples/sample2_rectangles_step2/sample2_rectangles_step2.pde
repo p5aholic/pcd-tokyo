@@ -17,7 +17,7 @@ void setup() {
 
 void draw() {
   changeColor();
-  background(getRandomPalette(), 5, 90);
+  background(getRandomPalette(), 5, 95);
 
   // 右と左で2つ正方形分割をする
   branch(width/2 - maxSize/2, height/2, maxSize);

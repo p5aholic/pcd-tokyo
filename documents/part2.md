@@ -104,3 +104,44 @@ rect(cx, cy, size, size);
 [Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/sample2_rectangles_step3)
 ![](../images/sample2_step3_1.png)
 ![](../images/sample2_step3_2.png)
+
+`P2D`レンダリングモードは内部で`OpenGL`を使用しているため、頂点に別々の色を指定することでグラデーションが作れる。
+[Sample1](https://github.com/p5aholic/pcd-tokyo/tree/master/samples/gradation)
+```java
+// 上から下へのグラデーション
+beginShape();
+fill(random(360), 100, 100);
+vertex(-size/2, -size/2);
+vertex(+size/2, -size/2);
+
+fill(random(360), 100, 100);
+vertex(+size/2, +size/2);
+vertex(-size/2, +size/2);
+endShape(CLOSE);
+```
+
+ランダムに回転処理を加えることで、グラデーションの方向を変える
+```java
+void drawGradationRect(float cx, float cy, float size) {
+  // 90度、180度、270度のどれかで回転する
+  pushMatrix();
+  translate(cx, cy);
+  int r = (int)random(4);
+  rotate(r * HALF_PI);
+
+  // グラデーションする長方形を描く
+  beginShape();
+  strokeWeight(1);
+  stroke(0, 0, 0, 5);
+  fill(palette[0], 100, 100, 10);
+  vertex(-size/2, -size/2);
+  vertex(+size/2, -size/2);
+
+  fill(palette[1], 100, 100, 10);
+  vertex(+size/2, +size/2);
+  vertex(-size/2, +size/2);
+  endShape(CLOSE);
+
+  popMatrix();
+}
+```
