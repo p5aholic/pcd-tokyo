@@ -4,8 +4,6 @@ float noiseScale;
 float angleAmplitude;
 float startAngle;
 
-int mode = 1; // 1 or 2
-
 void setup() {
   size(600, 600, P2D);
   pixelDensity(displayDensity());
@@ -14,8 +12,8 @@ void setup() {
   y = random(height);
   speed = 1.0;
   noiseScale = 0.01;
-  // angleAmplitude = random(3, 12);
-  // startAngle = random(TWO_PI);
+  //angleAmplitude = random(3, 12);
+  //startAngle = random(TWO_PI);
   angleAmplitude = PI;
   startAngle = 0;
 }
