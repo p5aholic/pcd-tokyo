@@ -101,7 +101,7 @@ for (Particle p : particles) {
 }
 ```
 
-これでもいいが、`beginShape(POINTS)`を使うほうが高速
+これでもいいが、`beginShape(POINTS)`を使うほうが高速（な気がする）
 ```java
 beginShape(POINTS);
 for (Particle p : particles) {
