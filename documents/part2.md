@@ -98,6 +98,12 @@ if (random(1) < 0.9) {
 rect(cx, cy, size, size);
 ```
 
+分岐の確率をサイズで変える
+```java
+// サイズが小さいほど分岐確率を下げる
+float P = map(size, minSize, maxSize, 0.4, 1);
+```
+
 # Sample2 : Step3
 グラデーションを使用しビジュアルに複雑さを足す。
 
