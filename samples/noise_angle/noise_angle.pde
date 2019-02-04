@@ -12,10 +12,10 @@ void setup() {
   y = random(height);
   speed = 1.0;
   noiseScale = 0.01;
-  //angleAmplitude = random(3, 12);
-  //startAngle = random(TWO_PI);
-  angleAmplitude = PI;
-  startAngle = 0;
+  angleAmplitude = random(3, 12);
+  startAngle = random(TWO_PI);
+  //angleAmplitude = PI;
+  //startAngle = 0;
 }
 
 void draw() {
